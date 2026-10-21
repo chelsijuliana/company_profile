@@ -1,0 +1,530 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf7f3;
+    color: #3b2a1f;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background-color: #faf7f3;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.brand img {
+    height: 38px;
+}
+
+.brand span {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #3b2a1f;
+    font-weight: 600;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('/images/bakery.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45); /* cream overlay */
+}
+
+
+/* BUTTONS */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 60px;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #5a3825;
+    padding: 14px 34px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 30px;
+}
+
+.btn-outline {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 14px 34px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 30px;
+}
+
+/* HERO IMAGE */
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 24px;
+}
+
+/* VALUES */
+.values {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 80px 20px;
+    background-color: #3b2a1f; /* warna background (bekas warna teks) */
+}
+
+.value-item {
+    max-width: 240px;
+    text-align: center;
+}
+
+.value-item h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #ffffff; /* teks jadi putih */
+}
+
+.value-item p {
+    color: #ffffff; /* teks jadi putih */
+    opacity: 0.9;   /* biar lembut dikit */
+}
+
+
+.best-seller {
+    padding: 100px 20px;
+    background-color: #faf7f3;
+    text-align: center;
+}
+
+.best-seller h2 {
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+
+/* GRID BIAR FULL & SEJAJAR */
+.product-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* CARD */
+.product-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* IMAGE */
+.product-card img {
+    width: 100%;
+    height: 200px;          /* frame foto konsisten */
+    object-fit: cover;      /* isi frame tanpa gepeng */
+    object-position: center;
+    border-radius: 14px;
+    margin-bottom: 16px;
+}
+
+
+/* NAME */
+.product-card h4 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+/* PRICE */
+.product-card .price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5a3825;
+    margin-bottom: 10px;
+}
+
+/* DESCRIPTION */
+.product-card p {
+    font-size: 14px;
+    color: #6b5a4a;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.btn-detail {
+    margin-top: auto;
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 30px;
+    background-color: #5a3825;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.btn-detail:hover {
+    background-color: #3b2a1f;
+}
+
+/* FOOTER */
+.footer {
+    padding: 30px;
+    text-align: center;
+    background-color: #3b2a1f;
+    color: #ffffff;
+}
+
+/* ABOUT */
+.about {
+    position: relative;
+    padding: 120px 20px;          /* tinggi normal, tidak full layar */
+    background-image: url('/images/abt.jpeg');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+/* overlay gelap (sama konsep dengan hero) */
+.about-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+/* container utama */
+.about-container {
+    position: relative;
+    z-index: 2;                   /* di atas overlay */
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* teks about */
+.about-text {
+    max-width: 520px;
+    color: #ffffff;
+}
+
+.about-text h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+/* opsional: biar teks makin kebaca tanpa bikin pudar */
+.about-text h2,
+.about-text p {
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+/* PRODUCTS */
+.products {
+    padding: 100px 10px; /* ⬅️ KECILIN dari 20px */
+    background-color: #faf7f3;
+    text-align: center;
+}
+
+
+.products h2 {
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 0 40px; /* ruang kecil buat panah */
+}
+
+
+.product-slider {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+
+.product-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* CARD SAMA DENGAN BEST SELLER */
+.product-card {
+    min-width: 260px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+/* ============================= */
+/* PRODUCT CARD HOVER ANIMATION */
+/* ============================= */
+
+.product-card {
+    transition: 
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* saat hover */
+.product-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+.product-card img {
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.08);
+}
+.product-card:hover .btn-detail {
+    background-color: #3b2a1f;
+}
+
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 16px;
+}
+
+.product-card h4 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.price {
+    font-weight: 700;
+    color: #5a3825;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #6b5a4a;
+    margin-bottom: 20px;
+}
+
+.btn-detail {
+    margin-top: auto;
+    padding: 10px 28px;
+    background-color: #5a3825;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+/* PANAH */
+/* SLIDER WRAPPER */
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 0 40px;
+}
+
+/* SLIDER */
+.product-slider {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;        /* ⬅️ INI KUNCI */
+    scroll-behavior: smooth;
+}
+
+.product-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* PANAH */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: #ffffff;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;            /* ⬅️ WAJIB */
+}
+
+.slider-btn.left {
+    left: 0;
+}
+
+.slider-btn.right {
+    right: 0;
+}
+
+
+
+/* CONTACT FOOTER */
+.contact-footer {
+    background-color: #3b2a1f; /* hijau gelap / earth tone */
+    padding: 80px 40px;
+    color: #f5f5f5;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.2fr;
+    gap: 60px;
+}
+
+.contact-col h3 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.contact-col h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.contact-col p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #dcdcdc;
+}
+
+.contact-col ul {
+    list-style: none;
+}
+
+.contact-col ul li {
+    margin-bottom: 10px;
+}
+
+.contact-col ul li a {
+    text-decoration: none;
+    color: #dcdcdc;
+    font-size: 15px;
+}
+
+.contact-col ul li a:hover {
+    color: #ffffff;
+}
+
+/* FOOTER BOTTOM */
+.footer {
+    background-color: #2d2017;
+    padding: 20px;
+    text-align: center;
+    color: #cccccc;
+    font-size: 14px;
+}
+/* FLOATING WHATSAPP - IMAGE ONLY */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 90px;          /* ukuran icon */
+    height: auto;
+    background: none;     /* ❌ tidak ada background */
+    box-shadow: none;     /* ❌ tidak ada shadow */
+    z-index: 999;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
